@@ -1,0 +1,43 @@
+Index: app/src/main/java/com/example/dager/di/MyApplication.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/dager/di/MyApplication.kt	(revision bcea200351634fbe673d86f839df1838f8d9705f)
++++ app/src/main/java/com/example/dager/di/MyApplication.kt	(date 1562593001024)
+@@ -10,9 +10,7 @@
+             .builder() //.application(this)
+             .build()
+ 
+-    fun a(){
+-        DaggerAppComponent.builder().build()
+-    }
++
+ }
+ 
+ 
+Index: app/src/main/java/com/example/dager/di/AppComponent.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/dager/di/AppComponent.kt	(revision bcea200351634fbe673d86f839df1838f8d9705f)
++++ app/src/main/java/com/example/dager/di/AppComponent.kt	(date 1562593001001)
+@@ -10,11 +10,11 @@
+ @Component(modules = [ AppModule::class, AndroidSupportInjectionModule::class, ActivityBindingModule::class ])
+ interface AppComponent: AndroidInjector<MyApplication> {
+ 
+-    //interface Builder {
+-      //  @BindsInstance
+-      //  fun application(application: Application): AppComponent.Builder
+-       // fun build(): AppComponent
+-    //}
++    interface Builder {
++        @BindsInstance
++        fun application(application: Application): AppComponent.Builder
++        fun build(): AppComponent
++    }
+ 
+     fun inject()
+ }
+\ No newline at end of file

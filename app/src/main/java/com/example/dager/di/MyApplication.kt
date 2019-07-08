@@ -10,9 +10,7 @@ class MyApplication: DaggerApplication() {
             .builder() //.application(this)
             .build()
 
-    fun a(){
-        DaggerAppComponent.builder().build()
-    }
+
 }
 
 
