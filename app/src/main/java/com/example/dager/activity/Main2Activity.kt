@@ -1,19 +1,15 @@
-package com.example.dager
+package com.example.dager.activity
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import com.google.android.material.snackbar.Snackbar
-import androidx.appcompat.app.AppCompatActivity;
-import com.example.dager.di.DaggerAppComponent
-import com.example.dager.di.MyApplication
+import com.example.dager.R
 import com.example.dager.utils.MathUtils
-import dagger.android.support.DaggerAppCompatActivity
-
 import kotlinx.android.synthetic.main.activity_main2.*
 import javax.inject.Inject
 
-class Main2Activity : DaggerAppCompatActivity() {
+
+//nie musimy dziedziczyc bo klasie DaggerApplication jeżeli mamy jakies bazowe Activity ktore robi: AndroidInjection.inject(this) w onCreate
+class Main2Activity : BaseActivity() {
 
     @Inject lateinit var mathUtils: MathUtils
 

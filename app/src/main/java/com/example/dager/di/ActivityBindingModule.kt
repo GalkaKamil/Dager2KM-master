@@ -1,12 +1,8 @@
 package com.example.dager.di
 
-import com.example.dager.InjectConstructorActivity
-import com.example.dager.Main2Activity
-import com.example.dager.MainActivity
-import com.example.dager.utils.MathUtils
-import com.example.dager.utils.StringUtils
-import dagger.Binds
-import dagger.MapKey
+import com.example.dager.activity.InjectConstructorActivity
+import com.example.dager.activity.Main2Activity
+import com.example.dager.activity.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -21,7 +17,6 @@ abstract class ActivityBindingModule {
 
     @ContributesAndroidInjector(modules = [AppModule::class])
     abstract fun injectConstructorActivity(): InjectConstructorActivity
-
 
 
 }
